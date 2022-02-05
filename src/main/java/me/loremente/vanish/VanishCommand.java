@@ -24,7 +24,7 @@ public class VanishCommand implements CommandExecutor {
             if (vanished.contains(player.getUniqueId())) {
                 vanished.remove(player.getUniqueId());
                 for (Player target : Bukkit.getOnlinePlayers()) {
-                    target.showPlayer(Player);
+                    target.showPlayer(player);
                 }
                 player.sendMessage(ChatColor.GREEN + "You unvanished!");
             } else {
